@@ -12,7 +12,8 @@ setup(
     py_modules=['tap_blob_storage'],
     install_requires=[
         'azure-storage-blob==12.8.1',
-        'argparse==1.4.0'
+        'argparse==1.4.0',
+        'six>=1.16.0'
     ],
     entry_points='''
         [console_scripts]
