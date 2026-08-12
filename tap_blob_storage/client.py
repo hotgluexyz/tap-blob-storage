@@ -33,9 +33,8 @@ def should_download_blob(blob_name: str, last_modified: datetime, bookmarks: Dic
 def _download_blob(container_client, blob_name: str, target_path: str) -> None:
     """Download a single blob to the local target path."""
     blob_client = container_client.get_blob_client(blob_name)
-    data = blob_client.download_blob().readall()
     with open(target_path, "wb") as file:
-        file.write(data)
+        blob_client.download_blob().readinto(file)
 
 
 def _download_if_updated(
