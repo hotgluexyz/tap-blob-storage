@@ -10,7 +10,7 @@ keywords = [
 license = "Apache 2.0"
 
 [tool.poetry.dependencies]
-python = "<3.15,>=3.7.1"
+python = "<3.15,>=3.7"
 azure-storage-blob = ">=12.19.0,<13"
 hotglue-singer-sdk = ">=1.0.43"
 hotglue-etl-exceptions = ">=0.1.0"
